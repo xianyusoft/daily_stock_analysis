@@ -17,6 +17,12 @@ on:
           - full          # 完整分析（股票+大盘）
           - market-only   # 仅大盘复盘
           - stocks-only   # 仅股票分析
+      force_run:
+        description: '强制运行（跳过交易日检查）'
+        required: false
+        default: false
+        type: boolean   # 必须是 boolean，才能渲染为复选框
+
 
 # 并发控制：同一时间只运行一个分析任务
 concurrency:
